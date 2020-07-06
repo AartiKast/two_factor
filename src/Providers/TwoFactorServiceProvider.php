@@ -5,6 +5,7 @@ namespace Shree\TwoFactor\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
 use Shree\TwoFactor\Http\Middleware\TwoFactorVerification;
+use Shree\TwoFactor\Http\Controllers\TwoFactorController;
 
 class TwoFactorServiceProvider extends ServiceProvider{
 	public function boot(){
