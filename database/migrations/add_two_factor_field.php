@@ -19,15 +19,4 @@ class AddTwoFactorFieldUsersTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['two_factor_token','two_factor_expiry']);
-        });
-    }
 }
