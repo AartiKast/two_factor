@@ -3,6 +3,7 @@
 namespace Shree\TwoFactor\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Routing\Router;
 use Shree\TwoFactor\Http\Middleware\TwoFactorVerification;
 use Shree\TwoFactor\Http\Controllers\TwoFactorController;
@@ -13,8 +14,12 @@ class TwoFactorServiceProvider extends ServiceProvider{
 		$this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 		$this->loadViewsFrom(__DIR__.'/../../resources/views','2fa');
 
-		$router = $this->app->make(Router::class);
-		$router->aliasMiddleware('TwoFactorVerification',TwoFactorVerification::class);
+		// $router = $this->app->make(Router::class);
+		// $router->aliasMiddleware('TwoFactorVerification',TwoFactorVerification::class);
+
+		$kernel = $this->app->make(Kernel::class);
+  		$kernel->pushMiddleware(TwoFactorVerification::class);
+
 
 		if($this->app->runningInConsole()){
 			//publish config file
