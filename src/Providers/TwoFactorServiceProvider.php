@@ -20,7 +20,7 @@ class TwoFactorServiceProvider extends ServiceProvider{
 			$this->publishes([__DIR__.'/../../config/twoFactorConfig.php' => config_path('twoFactorConfig.php'),],'config');
 
 			//publish migration file
-			$this->publishes([__DIR__.'/../../database/migrations/add_two_factor_field.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_add_two_factor_fields.php'),],'migrations');
+			$this->publishes([__DIR__.'/../../database/migrations/' => database_path('migrations'),],'migrations');
 
 			//publish view files
 			$this->publishes([__DIR__.'/../../resources/views/' => resource_path('views/vendor/2fa'),],'views');
