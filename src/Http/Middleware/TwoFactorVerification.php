@@ -1,6 +1,6 @@
 <?php
 
-namespace Shree\TwoFactor\Middleware;
+namespace Shree\TwoFactor\Http\Middleware;
 
 use Closure;
 use Shree\TwoFactor\Mail\TwoFactorAuthMail;
