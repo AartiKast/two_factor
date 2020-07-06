@@ -3,6 +3,7 @@
 namespace Shree\TwoFactor\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Shree\TwoFactor\Http\Controllers\Controller;
 use Auth;
 
 class TwoFactorController extends Controller{
