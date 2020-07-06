@@ -3,12 +3,12 @@
 namespace Shree\TwoFactor\Providers;
 
 use Illuminate\Support\ServiceProvider;
-// use Illuminate\Routing\Router;
+use Illuminate\Routing\Router;
 use Shree\TwoFactor\Http\Middleware\TwoFactorVerification;
 
 class TwoFactorServiceProvider extends ServiceProvider{
 	public function boot(){
-		$this->loadRoutesFrom(__DIR__ . '/../routes/routes.php');
+		$this->loadRoutesFrom(__DIR__ .'/../routes/routes.php');
 		$this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
 		$this->loadViewsFrom(__DIR__.'/../../resources/views','2fa');
 
