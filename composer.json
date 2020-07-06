@@ -1,0 +1,27 @@
+{
+    "name": "shree/two_factor",
+    "description": "Two factor Authentication",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aarti Maheshwari",
+            "email": "aarti.m@yudiz.in"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Shree\\TwoFactor\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shree\\TwoFactor\\Providers\\TwoFactorServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
