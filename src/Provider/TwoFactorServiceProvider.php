@@ -28,6 +28,6 @@ class TwoFactorServiceProvider extends ServiceProvider{
 	}
 
 	public function register(){
-		$this->mergeConfigFrom(__DIR__.'/config/twoFactorConfig.php','2fa');
+		$this->mergeConfigFrom(__DIR__.'/../../config/twoFactorConfig.php','2fa');
 	}
 }
