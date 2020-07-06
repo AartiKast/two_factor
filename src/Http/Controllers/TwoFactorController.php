@@ -12,7 +12,7 @@ class TwoFactorController {
 	}
 
 	public function show2faForm(){
-		return view('2fa');
+		return view('twoFactor.2fa');
 	}
 
 	public function verifyToken(Request $request){
