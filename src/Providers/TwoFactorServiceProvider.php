@@ -15,6 +15,7 @@ class TwoFactorServiceProvider extends ServiceProvider{
 
 		$router = $this->app->make(Router::class);
 		$router->aliasMiddleware('TwoFactorVerification',TwoFactorVerification::class);
+		$router->aliasController('TwoFactorController',TwoFactorController::class);
 
 		if($this->app->runningInConsole()){
 			//publish config file
@@ -30,6 +31,6 @@ class TwoFactorServiceProvider extends ServiceProvider{
 
 	public function register(){
 		$this->mergeConfigFrom(__DIR__.'/../../config/twoFactorConfig.php','2fa');
-		$this->app->make('Shree\TwoFactor\TwoFactorController');
+		// $this->app->make('Shree\TwoFactor\TwoFactorController');
 	}
 }
