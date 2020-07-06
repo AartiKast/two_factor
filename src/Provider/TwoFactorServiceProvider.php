@@ -1,6 +1,6 @@
 <?php
 
-namespace Shree\TwoFactor;
+namespace Shree\TwoFactor\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
