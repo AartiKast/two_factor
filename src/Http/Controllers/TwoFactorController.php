@@ -8,7 +8,7 @@ use Auth;
 class TwoFactorController{
 
 	public function __construct(){
-		$this->middleware('two_factor_auth');
+		$this->middleware('TwoFactorVerification');
 	}
 
 	public function show2faForm(){

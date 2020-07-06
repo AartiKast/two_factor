@@ -2,6 +2,9 @@
 
 namespace Shree\TwoFactor\Middleware;
 
+use Closure;
+use Shree\TwoFactor\Mail\TwoFactorAuthMail;
+
 class TwoFactorVerification{
 
 	public function handle($request, Closure $next){
