@@ -3,10 +3,10 @@
 namespace Shree\TwoFactor\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use Shree\TwoFactor\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use Auth;
 
-class TwoFactorController{
+class TwoFactorController extends Controller{
 
 	public function __construct(){
 		$this->middleware('two_factor_auth');
