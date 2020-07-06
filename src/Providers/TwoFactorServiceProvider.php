@@ -3,7 +3,7 @@
 namespace Shree\TwoFactor\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Routing\Router;
+// use Illuminate\Routing\Router;
 use Shree\TwoFactor\Http\Middleware\TwoFactorVerification;
 
 class TwoFactorServiceProvider extends ServiceProvider{
